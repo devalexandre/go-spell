@@ -16,24 +16,26 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/devalexandre/go-spell/pkg"
 )
 
 func main() {
-	// Example dictionary of words
+	// Exemplo de dicionário de palavras
 	dictionary := []string{"apple", "banana", "cherry", "grape", "lemon", "lime", "orange", "strawberry"}
 
-	// Target word we want to check
+	// Palavra que queremos verificar
 	targetWord := "apxle"
 
-	// Define a maximum allowed distance
+	// Define um limite de distância máxima permitida
 	maxDistance := 2
 
-	// Find words within the specified distance from the target word
-	words := levenshtein.Find(dictionary, maxDistance, targetWord)
+	words := pkg.Find(dictionary, maxDistance, targetWord)
 
-	fmt.Println("Words:", words)
+	fmt.Println("Words", words)
+
 }
+
 ```
 
 In this example, we import the levenshtein package and use it to find words in the dictionary that are within a maximum distance of 2 from the target word "apxle."
